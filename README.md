@@ -5,6 +5,10 @@
 
 Because you want the contents of https://www.gov.uk/api/organisations on your machine, and you want it right now.
 
+*Warning:*
+
+![Undogefficial](http://i.imgur.com/x8CF7oo.jpg "such unsupported api much subject to change")
+
 Install and run:
 
 ```
