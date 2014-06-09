@@ -1,0 +1,12 @@
+{
+    "name"         : "gos",
+    "version"      : "0.0.1",
+    "description"  : "Government Organisation Scraper: Scrape the GOV.UK Organisations API for 'fun' and profit.",
+    "main"         : "scrape.js",
+    "author"       : "Ralph Cowling",
+    "dependencies" : {
+        "colors"    : "latest",
+        "q"         : "latest",
+        "request"   : "latest"
+    }
+}
