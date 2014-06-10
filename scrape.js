@@ -1,16 +1,19 @@
+var colors = require('colors');
 var fs = require('fs');
 var q = require('q');
 var request = require('request');
-var colors = require('colors');
 
 var Scraper = function(){
     // 'use strict';
     const baseurl = 'https://www.gov.uk/api/organisations';
     this.log = function() {
-
-        var args = Array.prototype.slice.call(arguments),
+        var colors = ['green', 'cyan', 'yellow'];
+        var args = Array.prototype.slice.call(arguments).map(function (arg, i) {
+            var color = colors[i % colors.length];
+            return arg[color];
+        }),
             message = args.join(': '.grey);
-        return console.log('[Scraper]'.magenta.bold, message.green);
+        return console.log('[Scraper]'.magenta, message);
     },
     this.get = function(slug) {
         var deferred = q.defer();
@@ -23,7 +26,7 @@ var Scraper = function(){
         var requestPath = baseurl+slug.replace(baseurl, '');
         _this.log('Requesting', requestPath);
         request(requestPath, function(error, response, body){
-            _this.log('Request returned', response.headers.status + ' with type ' + response.headers['content-type']);
+            _this.log('Request returned', response.headers.status, 'of type ' + response.headers['content-type']);
             var responseObj = {
                 'response'  : response,
                 'error'     : error,
