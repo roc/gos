@@ -2,11 +2,15 @@
     "name"         : "gos",
     "version"      : "0.0.1",
     "description"  : "Government Organisation Scraper: Scrape the GOV.UK Organisations API for 'fun' and profit.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/roc/gos"
+    },
     "main"         : "scrape.js",
     "author"       : "Ralph Cowling",
     "dependencies" : {
-        "colors"    : "latest",
-        "q"         : "latest",
-        "request"   : "latest"
+        "colors"    : "0.6.x",
+        "q"         : "1.0.x",
+        "request"   : "2.x.x"
     }
 }
