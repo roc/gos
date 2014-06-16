@@ -3,13 +3,13 @@ var fs = require('fs');
 var q = require('q');
 var request = require('request');
 
-var Scraper = function(){
+var Scraper = function () {
     // 'use strict';
     const baseurl = 'https://www.gov.uk/api/organisations';
     this.log = function() {
-        var colors = ['green', 'cyan', 'yellow'];
+        var colours = ['green', 'cyan', 'yellow'];
         var args = Array.prototype.slice.call(arguments).map(function (arg, i) {
-            var color = colors[i % colors.length];
+            var color = colours[i % colours.length];
             return arg[color];
         }),
             message = args.join(': '.grey);
